@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 56f5bd587ee8b6746926bce290bf4150
+guid: 42aae5654651be649b68cf90cd0e3457
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3171352617803031140
-    second: turret top_0
+      213: 2399815790484476621
+    second: turret base_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,40 +96,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: turret top_0
+      name: turret base_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 8
-        width: 23
-        height: 16
-      alignment: 9
-      pivot: {x: 0.24297503, y: 0.5000001}
+        x: 3
+        y: 3
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c9d585eb8971df3d0800000000000000
-      internalID: -3171352617803031140
+      spriteID: dc253362fbbdd4120800000000000000
+      internalID: 2399815790484476621
       vertices: []
       indices: 
       edges: []
@@ -138,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 335fa419377309e4783f253adeb7c4d8
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      turret top_0: -3171352617803031140
+      turret base_0: 2399815790484476621
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
