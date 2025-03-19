@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4611f252ab4605146884469ec8306164
+guid: b49a1e2a1fe744e46b5551af7484c6b2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6066270033005943220
-    second: ZombieSurvivalPlayer_0
+      213: -1906893420167802037
+    second: ZombieSurvivalPlayer 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ZombieSurvivalPlayer_0
+      name: ZombieSurvivalPlayer 2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 12
-        width: 16
-        height: 20
+        y: 0
+        width: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c466513ab8740dba0800000000000000
-      internalID: -6066270033005943220
+      spriteID: b435e5a998a5985e0800000000000000
+      internalID: -1906893420167802037
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ZombieSurvivalPlayer_0: -6066270033005943220
+      ZombieSurvivalPlayer 2_0: -1906893420167802037
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
