@@ -12,8 +12,17 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D body;
     private System.Random random = new System.Random();
 
-    public float minSpawnRange = 10f; // Minimum distance from the center
-    public float maxSpawnRange = 20f; // Maximum distance from the center
+    public float minSpawnRange = 0f; // Minimum distance from the center (zet op 100 binnen Unity)
+    public float maxSpawnRange = 0f; // Maximum distance from the center (zet op 200 binnen Unity)
+
+    void OnValidate()
+    {
+        // Ensure minSpawnRange is not greater than maxSpawnRange
+        if (minSpawnRange > maxSpawnRange)
+        {
+            minSpawnRange = maxSpawnRange;
+        }
+    }
 
 
     void Start()
