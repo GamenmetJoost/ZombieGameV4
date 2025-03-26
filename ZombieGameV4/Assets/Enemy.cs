@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class Enemy : MonoBehaviour
 {
@@ -31,11 +32,14 @@ public class Enemy : MonoBehaviour
             // Move towards the goal
             Vector2 direction = (goal.transform.position - transform.position).normalized;
             body.linearVelocity = direction * moveSpeed;
+            Vector3 directionToGoal = (goal.transform.position - transform.position).normalized;
+            transform.right = directionToGoal;
         }
 
         if (isOriginal)
         {
             transform.position = new Vector2(2000f, 1000f);
+
 
             int randomNumber = random.Next(1, 10);
             if (randomNumber == 2)
