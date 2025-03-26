@@ -2236,7 +2236,8 @@ MonoBehaviour:
   moveSpeed: 2
   shootSpeed: 20
   HP: 100
-  spawnrange: 100
+  minSpawnRange: 10
+  maxSpawnRange: 20
 --- !u!61 &1598725344
 BoxCollider2D:
   m_ObjectHideFlags: 0
