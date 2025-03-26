@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class Enemy : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D body;
     private System.Random random = new System.Random();
 
-    public float spawnrange = 20;
+    public float minSpawnRange = 10f; // Minimum distance from the center
+    public float maxSpawnRange = 20f; // Maximum distance from the center
 
 
     void Start()
@@ -19,8 +21,8 @@ public class Enemy : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
 
         // Set enemy at a random position within a range
-        float randomX = UnityEngine.Random.Range(-spawnrange, spawnrange);
-        float randomY = UnityEngine.Random.Range(-spawnrange, spawnrange);
+        float randomX = UnityEngine.Random.Range(-minSpawnRange, maxSpawnRange);
+        float randomY = UnityEngine.Random.Range(-minSpawnRange, maxSpawnRange);
         transform.position = new Vector2(randomX, randomY);
     }
 
@@ -31,11 +33,14 @@ public class Enemy : MonoBehaviour
             // Move towards the goal
             Vector2 direction = (goal.transform.position - transform.position).normalized;
             body.linearVelocity = direction * moveSpeed;
+            Vector3 directionToGoal = (goal.transform.position - transform.position).normalized;
+            transform.right = directionToGoal;
         }
 
         if (isOriginal)
         {
             transform.position = new Vector2(2000f, 1000f);
+
 
             int randomNumber = random.Next(1, 10);
             if (randomNumber == 2)
