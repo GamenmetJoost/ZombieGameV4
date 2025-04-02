@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class Base : MonoBehaviour
 {
-
-
     public float HP = 100.0f;
     private Rigidbody2D body;
 
@@ -11,7 +9,6 @@ public class Base : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-
     }
 
     // Update is called once per frame
@@ -37,5 +34,16 @@ public class Base : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }
+
+    void OnGUI()
+    {
+        // Set the style for the text
+        GUIStyle style = new GUIStyle();
+        style.fontSize = 24;
+        style.normal.textColor = Color.red;
+
+        // Display the HP in bright red letters
+        GUI.Label(new Rect(10, 10, 200, 50), "HP: " + HP.ToString("F1"), style);
     }
 }
