@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 1309730686129803059}
   m_Layer: 0
   m_Name: Turret bullet
-  m_TagString: Bullet
+  m_TagString: Turret2Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -257,7 +257,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5250768832699982937, guid: 7ed8bbe56f6c00e4eb1191129678cc1e, type: 3}
+  m_Sprite: {fileID: 8059433235156794288, guid: 50db82a268182764b965d6d733af79d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -333,7 +333,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.07, y: 0.06}
+    oldSize: {x: 0.14, y: 0.14}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6268a2fc490c294eb168431ab36f749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
+  speed: 100
   lifetime: 10
 --- !u!1 &7187068912463911491
 GameObject:
