@@ -1,4 +1,5 @@
-            using UnityEngine;
+using UnityEngine;
+
 
 public class TurretPlacer : MonoBehaviour
 {
@@ -7,13 +8,13 @@ public class TurretPlacer : MonoBehaviour
 
     public void PlaceTurret()
     {
-        Debug.Log($"Player position: {player.position}");
-        Debug.Log($"Turret prefab: {turretPrefab}");
         if (turretPrefab != null && player != null)
         {
-            Debug.Log(player.position.ToString());
-            Instantiate(turretPrefab, player.position + new Vector3(160, 120, 0), Quaternion.identity);
-            Debug.Log("Turret placed at player's position!");
+            if (MaterialManager.Instance.materialAmount >= 10) 
+            {
+                MaterialManager.Instance.materialAmount -= 10;
+                Instantiate(turretPrefab, player.position + new Vector3(160, 120, 0), Quaternion.identity);
+            }
         }
         else
         {
