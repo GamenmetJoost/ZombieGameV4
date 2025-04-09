@@ -36,6 +36,7 @@ public class Turret : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             bullet.SetActive(true); // Ensure the bullet is visible
             Turret_Bullet bulletScript = bullet.GetComponent<Turret_Bullet>();
+            bulletScript.isOriginal = false;
 
             if (bulletScript != null)
             {
