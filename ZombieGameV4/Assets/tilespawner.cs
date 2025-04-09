@@ -5,8 +5,10 @@ public class Spawner : MonoBehaviour
     public GameObject[] objectsToClone; // Assign multiple objects in the Inspector
     public int numberOfClones = 100;
     public Vector3 spawnArea = new Vector3(10f, 5f, 0f); // Z is typically 0 for 2D
-    public string sortingLayerName = "Background"; // Set this to your desired sorting layer
-    public int orderInLayer = -10; // Lower values render behind higher values
+    public string sortingLayerName = "Background"; // Default sorting layer
+    public int orderInLayer = -10; // Default order
+
+    public bool spawnAboveEverything = false; // Toggle to spawn on top
 
     void Start()
     {
@@ -26,7 +28,7 @@ public class Spawner : MonoBehaviour
             Vector3 randomPosition = new Vector3(
                 Random.Range(-spawnArea.x, spawnArea.x),
                 Random.Range(-spawnArea.y, spawnArea.y),
-                0f // Z is typically 0 for 2D
+                0f
             );
 
             GameObject randomObject = objectsToClone[Random.Range(0, objectsToClone.Length)];
@@ -36,8 +38,16 @@ public class Spawner : MonoBehaviour
             SpriteRenderer renderer = newClone.GetComponent<SpriteRenderer>();
             if (renderer != null)
             {
-                renderer.sortingLayerName = sortingLayerName;
-                renderer.sortingOrder = orderInLayer;
+                if (spawnAboveEverything)
+                {
+                    renderer.sortingLayerName = "Default"; // Change to whatever topmost layer you use
+                    renderer.sortingOrder = 999; // Very high number to ensure it's on top
+                }
+                else
+                {
+                    renderer.sortingLayerName = sortingLayerName;
+                    renderer.sortingOrder = orderInLayer;
+                }
             }
         }
     }
