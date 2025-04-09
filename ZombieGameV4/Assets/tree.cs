@@ -16,7 +16,7 @@ public class tree : MonoBehaviour
         
     }
 
-    void OnEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Bullet"))
         {
