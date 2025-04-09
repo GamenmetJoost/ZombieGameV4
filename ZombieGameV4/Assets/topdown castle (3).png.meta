@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bdc74afcc48df8a40b43bd8fd420a3e4
+guid: bd1b1c5a123721f48871b305d1239f4b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2972973306786540217
-    second: topdown castle (3) 1_0
+      213: -3289294803349889212
+    second: topdown castle (3)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: topdown castle (3) 1_0
+      name: topdown castle (3)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9baeab5987f124920800000000000000
-      internalID: 2972973306786540217
+      spriteID: 44f9ac4cdc31a52d0800000000000000
+      internalID: -3289294803349889212
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      topdown castle (3) 1_0: 2972973306786540217
+      topdown castle (3)_0: -3289294803349889212
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
