@@ -73,12 +73,9 @@ public class Enemy : MonoBehaviour
             // Destroy the bullet on impact
             Destroy(collision.gameObject);
             // Check if HP is depleted
-            if (HP <= 0)
-            {
-                Destroy(gameObject);
-            }
+
         }
-                if (collision.CompareTag("Turret2Bullet"))
+        if (collision.CompareTag("Turret2Bullet"))
         {
             // Reduce HP when hit by a bullet
             HP -= 100.0f;
@@ -86,10 +83,7 @@ public class Enemy : MonoBehaviour
             // Destroy the bullet on impact
             Destroy(collision.gameObject);
             // Check if HP is depleted
-            if (HP <= 0)
-            {
-                Destroy(gameObject);
-            }
+
         }
         if (collision.CompareTag("base"))
         {
@@ -97,10 +91,11 @@ public class Enemy : MonoBehaviour
             HP -= 50.0f;
 
             // Check if HP is depleted
-            if (HP <= 0)
-            {
-                Destroy(gameObject);
-            }
+        }
+
+        if (HP <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }
