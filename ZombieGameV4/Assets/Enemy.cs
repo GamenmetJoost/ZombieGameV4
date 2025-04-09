@@ -93,10 +93,7 @@ public class Enemy : MonoBehaviour
             // Destroy the bullet on impact
             Destroy(collision.gameObject);
             // Check if HP is depleted
-            if (HP <= 0)
-            {
-                Destroy(gameObject);
-            }
+
         }
         if (collision.CompareTag("base"))
         {

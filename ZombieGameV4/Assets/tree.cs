@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class tree : MonoBehaviour
 {
+
+    public float HP = 100.0f;
+
     private Rigidbody2D body;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,9 +24,19 @@ public class tree : MonoBehaviour
         if (collision.CompareTag("Bullet"))
         {
             Destroy(collision.gameObject); // Destroy the bullet
-            Destroy(gameObject); // Destroy the tree
+            HP -= 50.0f;
 
             MaterialManager.Instance.materialAmount += 2; // Add materials to the player
         }
+
+        if (HP <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
+
+
 }
+
+
+

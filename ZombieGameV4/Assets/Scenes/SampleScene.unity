@@ -206,6 +206,7 @@ MonoBehaviour:
   spawnArea: {x: 200, y: 200, z: 0}
   sortingLayerName: Background
   orderInLayer: -10
+  spawnAboveEverything: 0
 --- !u!1 &135053391
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,6 +896,7 @@ MonoBehaviour:
   spawnArea: {x: 200, y: 200, z: 0}
   sortingLayerName: Background
   orderInLayer: -10
+  spawnAboveEverything: 1
 --- !u!4 &796417453
 Transform:
   m_ObjectHideFlags: 0
@@ -1401,7 +1403,7 @@ GameObject:
   - component: {fileID: 1325492623}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1980,6 +1982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13d77359333bbd40862f0ecee6084d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 100
 --- !u!61 &1525789011
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2024,7 +2027,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.3, y: 0.3}
+  m_Size: {x: 0.2, y: 0.2}
   m_EdgeRadius: 0
 --- !u!61 &1525789012
 BoxCollider2D:
@@ -2070,7 +2073,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.62, y: 0.63}
+  m_Size: {x: 0.3, y: 0.3}
   m_EdgeRadius: 0
 --- !u!1 &1598725337
 GameObject:
