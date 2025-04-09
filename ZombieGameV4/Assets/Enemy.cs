@@ -30,8 +30,8 @@ public class Enemy : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
 
         // Set enemy at a random position within a range
-        float randomX = UnityEngine.Random.Range(-minSpawnRange, maxSpawnRange);
-        float randomY = UnityEngine.Random.Range(-minSpawnRange, maxSpawnRange);
+        float randomX = UnityEngine.Random.Range(-maxSpawnRange, maxSpawnRange);
+        float randomY = UnityEngine.Random.Range(-maxSpawnRange, maxSpawnRange);
         transform.position = new Vector2(randomX, randomY);
     }
 
