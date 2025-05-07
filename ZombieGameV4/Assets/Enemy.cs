@@ -94,6 +94,15 @@ public class Enemy : MonoBehaviour
             Destroy(collision.gameObject);
             // Check if HP is depleted
 
+        }if (collision.CompareTag("Turret3Bullet"))
+        {
+            // Reduce HP when hit by a bullet
+            HP -= 10.0f;
+
+            // Destroy the bullet on impact
+            Destroy(collision.gameObject);
+            // Check if HP is depleted
+
         }
         if (collision.CompareTag("base"))
         {
