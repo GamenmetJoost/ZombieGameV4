@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class Turret : MonoBehaviour
@@ -54,6 +55,7 @@ public class Turret : MonoBehaviour
     GameObject FindClosestEnemy()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        enemies = enemies.Concat(GameObject.FindGameObjectsWithTag("Enemy2")).ToArray();
         GameObject closest = null;
         float minDistance = Mathf.Infinity;
         Vector3 position = transform.position;
