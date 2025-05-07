@@ -177,7 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1171045273615734040}
   firePoint: {fileID: 2998159988485461461}
-  fireRate: 0.05
+  fireRate: 0.01
 --- !u!1 &1171045273615734040
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 1309730686129803059}
   m_Layer: 0
   m_Name: Turret bullet
-  m_TagString: Turret2Bullet
+  m_TagString: FlameBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
