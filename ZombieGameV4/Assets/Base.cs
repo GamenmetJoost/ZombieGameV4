@@ -24,7 +24,12 @@ public class Base : MonoBehaviour
 
         if (collision.CompareTag("Enemy"))
         {
-            // Reduce HP when hit by a bullet
+            // Reduce HP when hit by an enemy
+            HP -= 10f;
+        }
+        if (collision.CompareTag("Enemy2"))
+        {
+            // Reduce HP when hit by an enemy2
             HP -= 5f;
 
             // Destroy the bullet on impact
@@ -36,6 +41,8 @@ public class Base : MonoBehaviour
             }
         }
     }
+
+    
 
     void OnGUI()
     {
