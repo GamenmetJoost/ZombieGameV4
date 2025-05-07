@@ -13,7 +13,7 @@ public class TurretPlacer : MonoBehaviour
             if (MaterialManager.Instance.materialAmount >= 10) 
             {
                 MaterialManager.Instance.materialAmount -= 10;
-                Instantiate(turretPrefab, player.position + new Vector3(160, 120, 0), Quaternion.identity);
+                Instantiate(turretPrefab, player.position, Quaternion.identity);
             }
         }
         else
