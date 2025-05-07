@@ -354,7 +354,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  lifetime: 10
+  lifetime: 5
+  spreadAngle: 0
   isOriginal: 1
 --- !u!1 &7187068912463911491
 GameObject:
