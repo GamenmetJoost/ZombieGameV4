@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 734812854565191402}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -160.20915, y: -120.08266, z: 1.3086183}
+  m_LocalPosition: {x: 5, y: 5, z: 1}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -3171352617803031140, guid: 56f5bd587ee8b6746926bce290bf4150, type: 3}
+  m_Sprite: {fileID: -7994443559368270904, guid: efd3d9155ee8123428a5509fedac44f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -127,7 +127,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.24297503, y: 0.5000001}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.23, y: 0.16}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 1309730686129803059}
   m_Layer: 0
   m_Name: Turret bullet
-  m_TagString: Turret2Bullet
+  m_TagString: TurretMinigunBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -207,7 +207,7 @@ Transform:
   m_GameObject: {fileID: 1171045273615734040}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 819.0209, y: -118.67265, z: 1.3086183}
+  m_LocalPosition: {x: 5, y: 5, z: 1}
   m_LocalScale: {x: 10, y: 10, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -258,7 +258,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 8059433235156794288, guid: 50db82a268182764b965d6d733af79d3, type: 3}
-  m_Color: {r: 1, g: 0.096226394, b: 0.096226394, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -353,9 +353,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6268a2fc490c294eb168431ab36f749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  lifetime: 1
-  spreadAngle: 35
+  speed: 75
+  lifetime: 10
+  spreadAngle: 5
   isOriginal: 1
 --- !u!1 &7187068912463911491
 GameObject:
@@ -383,7 +383,7 @@ Transform:
   m_GameObject: {fileID: 7187068912463911491}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -160.23325, y: -120.067764, z: 1.3086183}
+  m_LocalPosition: {x: 5, y: 5, z: 1}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -454,7 +454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5336326043209211958}
   m_Layer: 0
-  m_Name: FlameThrower
+  m_Name: Turret Minigun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -469,7 +469,7 @@ Transform:
   m_GameObject: {fileID: 8886259514578522129}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 180.97916, y: 119.072655, z: -1.3086183}
+  m_LocalPosition: {x: 5, y: 5, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
