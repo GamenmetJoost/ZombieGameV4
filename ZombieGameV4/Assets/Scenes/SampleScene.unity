@@ -394,7 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11f0977ba5cf4148b90fa7910bc0e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretPrefab: {fileID: 8886259514578522129, guid: 777a8196b8f244141b7060eaf3df5589, type: 3}
+  turretPrefab: {fileID: 8886259514578522129, guid: cb29c10568abdcc4e8eed8be94282993, type: 3}
   player: {fileID: 1325492627}
 --- !u!114 &156655286
 MonoBehaviour:
@@ -439,7 +439,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 156655287}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 156655285}
+        m_TargetAssemblyTypeName: TurretPlacer, Assembly-CSharp
+        m_MethodName: PlaceTurret
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &156655287
 MonoBehaviour:
   m_ObjectHideFlags: 0
