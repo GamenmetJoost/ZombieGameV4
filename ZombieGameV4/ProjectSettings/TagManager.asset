@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Turret2Bullet
   - Turret1Bullet
+  - FlameBullet
   layers:
   - Default
   - TransparentFX
