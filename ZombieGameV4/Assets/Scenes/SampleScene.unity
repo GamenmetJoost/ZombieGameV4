@@ -2294,6 +2294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goal: {fileID: 907596183}
   moveSpeed: 2
+  Reduction: 0
   shootSpeed: 20
   HP: 100
   minSpawnRange: 10
@@ -3021,8 +3022,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goal: {fileID: 907596183}
   moveSpeed: 1
+  Reduction: 5
   shootSpeed: 10
-  HP: 500
+  HP: 200
   minSpawnRange: 10
   maxSpawnRange: 100
 --- !u!114 &2049566056
@@ -3266,6 +3268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goal: {fileID: 907596183}
   moveSpeed: 5
+  Reduction: 0
   shootSpeed: 20
   HP: 50
   minSpawnRange: 10
