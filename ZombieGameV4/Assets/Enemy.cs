@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     public GameObject goal; // Assign the goal in Unity Inspector
     public float moveSpeed = 5.0f;
+    public float Reduction = 0f;
+
     public float shootSpeed = 20.0f;
     public float HP = 100.0f;
     private bool isOriginal = true;
@@ -62,13 +64,23 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    static float DamageReduction(float Damage, float Reduction)
+    {
+        Damage = Damage - Reduction;
+        if (Damage < 0)
+        {
+            Damage = 0;
+        }
+        return Damage;
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.CompareTag("Bullet"))
         {
             // Reduce HP when hit by a bullet
-            HP -= 40.0f;
+            HP -= DamageReduction(40, Reduction);
 
             // Destroy the bullet on impact
             Destroy(collision.gameObject);
@@ -78,7 +90,7 @@ public class Enemy : MonoBehaviour
         if (collision.CompareTag("Turret2Bullet"))
         {
             // Reduce HP when hit by a bullet
-            HP -= 100.0f;
+            HP -= DamageReduction(100, Reduction);
 
             // Destroy the bullet on impact
             Destroy(collision.gameObject);
@@ -88,7 +100,7 @@ public class Enemy : MonoBehaviour
         if (collision.CompareTag("Turret1Bullet"))
         {
             // Reduce HP when hit by a bullet
-            HP -= 40.0f;
+            HP -= DamageReduction(40, Reduction);
 
             // Destroy the bullet on impact
             Destroy(collision.gameObject);
@@ -98,7 +110,7 @@ public class Enemy : MonoBehaviour
         if (collision.CompareTag("TurretMinigunBullet"))
         {
             // Reduce HP when hit by a bullet
-            HP -= 10.0f;
+            HP -= DamageReduction(10, Reduction);
 
             // Destroy the bullet on impact
             Destroy(collision.gameObject);
@@ -108,7 +120,7 @@ public class Enemy : MonoBehaviour
         if (collision.CompareTag("FlameBullet"))
         {
             // Reduce HP when hit by a bullet
-            HP -= 10.0f;
+            HP -= DamageReduction(6, Reduction);
 
             // Destroy the bullet on impact
             Destroy(collision.gameObject);
