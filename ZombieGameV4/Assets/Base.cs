@@ -6,13 +6,14 @@ public class Base : MonoBehaviour
     public float HP = 100.0f;
     private Rigidbody2D body;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Sleep dit GameObject in de inspector
+    public GameObject gameOverScreen;
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -34,15 +35,38 @@ public class Base : MonoBehaviour
 
             // Destroy the bullet on impact
             Destroy(collision.gameObject);
-            // Check if HP is depleted
-            if (HP <= 0)
-            {
-                Destroy(gameObject);
-            }
+        }
+
+        // Check if HP is depleted
+        if (HP <= 0)
+        {
+            GameOver();
         }
     }
 
-    
+    void GameOver()
+    {
+        if (gameOverScreen != null)
+        {
+            var screen = gameOverScreen.GetComponent<GameOverScreen>();
+            if (screen != null)
+            {
+                screen.Show();
+            }
+            else
+            {
+                gameOverScreen.SetActive(true);
+            }
+        }
+        Time.timeScale = 0f; // Pauzeer het spel
+        Destroy(gameObject);
+    }
+
+    // Public method to trigger GameOver from other scripts
+    public void TriggerGameOver()
+    {
+        GameOver();
+    }
 
     void OnGUI()
     {
