@@ -14,11 +14,10 @@ public class StartScreen : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    public void StartButton()
+    public void StartButton() 
     {
         Time.timeScale = 1f; // Zet het spel weer aan
         gameObject.SetActive(false); // Verberg het startscherm
-        // Als je NIET direct een nieuwe scene wilt laden, laat de volgende regel uitgeschakeld:
         // SceneManager.LoadScene("SampleScene"); 
     }
 
