@@ -8,14 +8,15 @@ public class MaterialManager : MonoBehaviour
 
     void Awake()
     {
-        // Make sure there's only one instance
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Optional: Keep across scenes
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
+            // Kopieer eventueel de materialAmount naar de bestaande Instance
+            Instance.materialAmount = materialAmount;
             Destroy(gameObject);
         }
     }
