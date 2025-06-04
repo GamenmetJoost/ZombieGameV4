@@ -1,19 +1,31 @@
 using UnityEngine;
 
-
 public class TurretPlacer : MonoBehaviour
 {
-    public GameObject turretPrefab; // Assign the turret prefab in Inspector
+    public GameObject turretPrefab; // Assign turret prefab in Inspector
     public Transform player; // Assign the player object in Inspector
 
     public void PlaceTurret()
     {
         if (turretPrefab != null && player != null)
         {
-            if (MaterialManager.Instance.materialAmount >= 10) 
+            turretPrefab turret = turretPrefab.GetComponent<turretPrefab>();
+            if (turret == null)
             {
-                MaterialManager.Instance.materialAmount -= 10;
+                Debug.LogError("Turret prefab is missing the turretPrefab script!");
+                return;
+            }
+
+            int cost = turret.Cost;
+
+            if (MaterialManager.Instance.materialAmount >= cost)
+            {
+                MaterialManager.Instance.materialAmount -= cost;
                 Instantiate(turretPrefab, player.position, Quaternion.identity);
+            }
+            else
+            {
+                Debug.Log("Not enough materials to place turret.");
             }
         }
         else
