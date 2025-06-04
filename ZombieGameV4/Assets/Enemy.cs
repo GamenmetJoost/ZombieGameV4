@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
 
     public float shootSpeed = 20.0f;
     public float HP = 100.0f;
+    public float SpawnChance = 50;
+    public float increaseOnSpawn = 0.01f;
     private bool isOriginal = true;
     private Rigidbody2D body;
     private System.Random random = new System.Random();
@@ -53,9 +55,10 @@ public class Enemy : MonoBehaviour
             transform.position = new Vector2(2000f, 1000f);
 
 
-            int randomNumber = random.Next(1, 10);
-            if (randomNumber == 2)
+            int randomNumber = random.Next(0, (int)Mathf.Floor(SpawnChance));
+            if (randomNumber == 0)
             {
+                SpawnChance -= increaseOnSpawn;
                 GameObject clone = Instantiate(gameObject);
                 Enemy cloneEnemy = clone.GetComponent<Enemy>();
                 cloneEnemy.isOriginal = false;
