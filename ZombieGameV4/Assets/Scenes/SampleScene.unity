@@ -2203,7 +2203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea59d217cb7a8b34caaa6e354e1909c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 1
+  HP: 1000
   gameOverScreen: {fileID: 214375539}
 --- !u!61 &907596189
 BoxCollider2D:
@@ -2489,7 +2489,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 0.63, y: 0.64}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2514,6 +2514,8 @@ MonoBehaviour:
   Reduction: 9
   shootSpeed: 10
   HP: 500
+  SpawnChance: 50
+  increaseOnSpawn: 0.01
   minSpawnRange: 10
   maxSpawnRange: 100
 --- !u!114 &1312427938
@@ -2570,7 +2572,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 0.63, y: 0.64}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2649,7 +2651,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2341256287458990148, guid: b2278195e02ed7244a81ddfc07154189, type: 3}
+  m_Sprite: {fileID: -2424553518018739129, guid: 3d2e7a4c2b2a19c4c949d77ba4ba9432, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2670,7 +2672,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1, y: 0, z: 0}
-  m_LocalScale: {x: 40, y: 40, z: 40}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -3572,6 +3574,8 @@ MonoBehaviour:
   Reduction: 0
   shootSpeed: 20
   HP: 100
+  SpawnChance: 50
+  increaseOnSpawn: 0.01
   minSpawnRange: 10
   maxSpawnRange: 100
 --- !u!61 &1598725344
@@ -4496,6 +4500,8 @@ MonoBehaviour:
   Reduction: 5
   shootSpeed: 10
   HP: 200
+  SpawnChance: 50
+  increaseOnSpawn: 0.01
   minSpawnRange: 10
   maxSpawnRange: 100
 --- !u!114 &2049566056
@@ -4742,6 +4748,8 @@ MonoBehaviour:
   Reduction: 0
   shootSpeed: 20
   HP: 50
+  SpawnChance: 50
+  increaseOnSpawn: 0.01
   minSpawnRange: 10
   maxSpawnRange: 100
 --- !u!114 &2102997302
